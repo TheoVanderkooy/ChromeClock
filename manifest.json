@@ -1,0 +1,16 @@
+{
+    "manifest_version":2,
+    "name": "SimpleClock",
+    "version": "1.0",
+    "description": "a clock for the chrome extension menu",
+    "author": "Theo Vanderkooy",
+    "permissions": [],
+    "background": {
+        "scripts": ["timer.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_popup": "settings.html"
+    }
+    
+}
