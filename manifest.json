@@ -6,17 +6,17 @@
     "author": "Theo Vanderkooy",
     "permissions": ["alarms"], 
     "background": {
-        "scripts": ["timer.js"],
+        "scripts": ["clock.js"],
         "persistent": false
     },
     "options_page": "settings.html",
     "browser_action": {
         "default_popup": "settings.html",
         "default_icon": {
-            "128": "images/1.bmp"   
+            "32": "images/1_32.png"   
         }
     },
     "icons": {
-        "128": "images/1.bmp"
+        "32": "images/1_32.png"
     }
 }
