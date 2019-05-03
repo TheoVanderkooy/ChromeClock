@@ -4,3 +4,5 @@ TODO
 - settings
   - colour
   - 24 hr time
+  - badge colour
+  - make settings page pretty

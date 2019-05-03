@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+<head>
+  <script src="settings.js"></script>
+  <style>
+    /* TODO */
+  </style>
+</head>
 <body>
-<p>test</p>
+
+  <form id="clockSettingsForm" name="clockSettingsForm">
+    <p class="setting">Text colour:</p>
+    <div>
+      <input type="radio" name="textColour" value="b" id="black_radio"/>
+      <label for="black_radio">Black</label>
+    </div>
+    <div>
+      <input type="radio" name="textColour" value="w" id="white_radio"/>
+      <label for="white_radio">White</label>
+    </div>
+    <button id="save_button">Save settings</button>
+    <p>Note: icon will update the next time the clock is updated. This could take up to one minute.</p>
+  </form>
 </body>
