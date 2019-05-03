@@ -8,7 +8,7 @@
 
     "permissions": ["alarms", "storage"], 
     "background": {
-        "scripts": ["clock.js"],
+        "scripts": ["update_icon.js", "clock.js"],
         "persistent": false
     },
     "options_page": "settings.html",

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+  <script src="update_icon.js"></script>
   <script src="settings.js"></script>
   <style>
     /* TODO */
@@ -8,16 +9,29 @@
 <body>
 
   <form id="clockSettingsForm" name="clockSettingsForm">
-    <p class="setting">Text colour:</p>
     <div>
-      <input type="radio" name="textColour" value="b" id="black_radio"/>
-      <label for="black_radio">Black</label>
+      <p class="setting_title">12 or 24 hour clock:</p>
+      <div>
+        <input type="radio" name="clockHours" value=12 id="12_hours"/>
+        <label for="12_hours">12 hours</label>
+      </div>
+      <div>
+        <input type="radio" name="clockHours" value=24 id="24_hours"/>
+        <label for="24_hours">24 hours</label>
+      </div>
     </div>
     <div>
-      <input type="radio" name="textColour" value="w" id="white_radio"/>
-      <label for="white_radio">White</label>
+      <p class="setting_title">Text colour:</p>
+      <div>
+        <input type="radio" name="textColour" value="b" id="black_radio"/>
+        <label for="black_radio">Black</label>
+      </div>
+      <div>
+        <input type="radio" name="textColour" value="w" id="white_radio"/>
+        <label for="white_radio">White</label>
+      </div>
     </div>
-    <button id="save_button">Save settings</button>
-    <p>Note: icon will update the next time the clock is updated. This could take up to one minute.</p>
+    <!-- <button id="save_button">Save settings</button> -->
+    <!-- <p>Note: icon will update the next time the clock is updated. This could take up to one minute.</p> -->
   </form>
 </body>

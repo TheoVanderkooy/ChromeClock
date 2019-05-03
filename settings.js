@@ -2,19 +2,29 @@
 
 // fill in the form with current/default settings
 
-function fillForm() {
-  document.getElementById("save_button").addEventListener("click",function(event){
-    // save settings to local storage when button clicked
-    localStorage["simple_clock_colour"] = document.clockSettingsForm.textColour[0].checked ? "b" : "w"
-    // localStorage["simple_clock_hours"] = document.clockSettingsForm.
-    // TODO finish
-    // TODO make save button state when the settings will be applied
-  })
+function saveSettings(event){
+  // save settings to local storage when button clicked
+  localStorage["simple_clock_colour"] = document.clockSettingsForm.textColour[0].checked ? "b" : "w"
+  localStorage["simple_clock_hours"] = document.clockSettingsForm.clockHours[0].checked ? 12 : 24
+  // TODO finish
 
+  updateIcon(new Date())
+}
+
+function fillForm() {
+  // document.getElementById("save_button").addEventListener("click",saveSettings)
+  document.clockSettingsForm.addEventListener("change",saveSettings)
+  
+  // 12 or 24 hours
   let hours = localStorage["simple_clock_hours"];
   if (typeof hours == "undefined") hours = 12;
-  // TODO check hours radio button
+  if (hours == 12) { // 12 hours
+    document.clockSettingsForm.clockHours[0].checked = true;
+  } else { // 24 hours
+    document.clockSettingsForm.clockHours[1].checked = true;
+  }
 
+  // clock text colour
   let colour = localStorage["simple_clock_colour"];
   if (typeof colour == "undefined") colour = "b";
   if (colour == "b") { // black text
