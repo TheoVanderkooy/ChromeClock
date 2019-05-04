@@ -1,5 +1,5 @@
 
-// data/settings
+// data
 let cur_hr = 0
 
 // settings
@@ -53,6 +53,5 @@ function updateIcon(now) {
   if (badge_colour[0] != r || badge_colour[1] != g || badge_colour[2] != b) {
     badge_colour = [r, g, b, 255]
     chrome.browserAction.setBadgeBackgroundColor({color: badge_colour})
-    // chrome.browserAction.setBadgeBackgroundColor({color: [0, 0, 0, 244]})
   }
 }

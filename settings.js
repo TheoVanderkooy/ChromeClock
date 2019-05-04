@@ -1,21 +1,19 @@
 
-
-// fill in the form with current/default settings
-
+// save the settings
 function saveSettings(event){
-  // save settings to local storage when button clicked
   localStorage["simple_clock_colour"] = document.clockSettingsForm.textColour[0].checked ? "b" : "w"
   localStorage["simple_clock_hours"] = document.clockSettingsForm.clockHours[0].checked ? 12 : 24
   localStorage["simple_clock_badge_red"] = document.clockSettingsForm.badgeRed.value
   localStorage["simple_clock_badge_green"] = document.clockSettingsForm.badgeGreen.value
   localStorage["simple_clock_badge_blue"] = document.clockSettingsForm.badgeBlue.value
-  // TODO finish (badge colour)
 
+  // update the icon again
   updateIcon(new Date())
 }
 
+// fill in the form with current/default settings
 function fillForm() {
-  // document.getElementById("save_button").addEventListener("click",saveSettings)
+  // listen for changes to the form to update the icon
   document.clockSettingsForm.addEventListener("change",saveSettings)
   
   // 12 or 24 hours

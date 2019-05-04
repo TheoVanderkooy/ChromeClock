@@ -4,6 +4,12 @@
   <script src="settings.js"></script>
   <style>
     /* TODO */
+    #clockSettingsForm {
+      width: 200px;
+    }
+    .setting_title {
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -35,7 +41,7 @@
     </div>
 
     <div>
-      <p class="settings_title">Badge Colour (background for minutes):</p>
+      <p class="setting_title">Badge Colour (background for minutes):</p>
       <div>
         <input type="number" name="badgeRed" value=0 id="red_badge" min=0 max=255 step=1/>
         <label for="red_badge">Red (0-255)</label>
