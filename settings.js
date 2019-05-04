@@ -6,7 +6,10 @@ function saveSettings(event){
   // save settings to local storage when button clicked
   localStorage["simple_clock_colour"] = document.clockSettingsForm.textColour[0].checked ? "b" : "w"
   localStorage["simple_clock_hours"] = document.clockSettingsForm.clockHours[0].checked ? 12 : 24
-  // TODO finish
+  localStorage["simple_clock_badge_red"] = document.clockSettingsForm.badgeRed.value
+  localStorage["simple_clock_badge_green"] = document.clockSettingsForm.badgeGreen.value
+  localStorage["simple_clock_badge_blue"] = document.clockSettingsForm.badgeBlue.value
+  // TODO finish (badge colour)
 
   updateIcon(new Date())
 }
@@ -33,6 +36,16 @@ function fillForm() {
     document.clockSettingsForm.textColour[1].checked = true;
   }
 
+  // badge colour
+  let r = localStorage["simple_clock_badge_red"]
+  let g = localStorage["simple_clock_badge_green"]
+  let b = localStorage["simple_clock_badge_blue"]
+  if (typeof r == "undefined") r = default_badge_colour[0]; // default colour
+  if (typeof g == "undefined") g = default_badge_colour[1];
+  if (typeof b == "undefined") b = default_badge_colour[2];
+  document.clockSettingsForm.badgeRed.value = r;
+  document.clockSettingsForm.badgeGreen.value = g;
+  document.clockSettingsForm.badgeBlue.value = b;
 }
 
 window.addEventListener("load", fillForm)

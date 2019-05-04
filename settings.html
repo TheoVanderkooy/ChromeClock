@@ -7,8 +7,9 @@
   </style>
 </head>
 <body>
-
+  <h1>Clock Settings</h1>
   <form id="clockSettingsForm" name="clockSettingsForm">
+
     <div>
       <p class="setting_title">12 or 24 hour clock:</p>
       <div>
@@ -20,6 +21,7 @@
         <label for="24_hours">24 hours</label>
       </div>
     </div>
+
     <div>
       <p class="setting_title">Text colour:</p>
       <div>
@@ -31,7 +33,22 @@
         <label for="white_radio">White</label>
       </div>
     </div>
-    <!-- <button id="save_button">Save settings</button> -->
-    <!-- <p>Note: icon will update the next time the clock is updated. This could take up to one minute.</p> -->
+
+    <div>
+      <p class="settings_title">Badge Colour (background for minutes):</p>
+      <div>
+        <input type="number" name="badgeRed" value=0 id="red_badge" min=0 max=255 step=1/>
+        <label for="red_badge">Red (0-255)</label>
+      </div>
+      <div>
+        <input type="number" name="badgeGreen" value=0 id="green_badge" min=0 max=255 step=1/>
+        <label for="green_badge">Green (0-255)</label>
+      </div>
+      <div>
+        <input type="number" name="badgeBlue" value=0 id="blue_badge" min=0 max=255 step=1/>
+        <label for="blue_badge">Blue (0-255)</label>
+      </div>
+    </div>
+
   </form>
 </body>
