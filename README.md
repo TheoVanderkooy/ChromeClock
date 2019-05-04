@@ -1,14 +1,9 @@
+A clock extension for Google Chrome. Displays the time in the extension icon.
+
 # TODO 
-- README
-- icons: make better: shift hour up so not overlapping badge as much
-- settings
-  - make settings page pretty
-  - badge colour: make update properly if colour fields changed and then click out of settings
+## New features/improvements
+- Better icons
+- Make settings page/popup look better
 
-
-
-
-// References/resources:
-// chrome://extensions/
-// https://developer.chrome.com/extensions/api_index
-// https://developer.chrome.com/extensions/getstarted
+## Bugs/issues
+- badge colour: make update properly if colour fields changed and then user clicks out of settings popup
